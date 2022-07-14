@@ -1,14 +1,3 @@
-if("notiffsymbols" IN_LIST FEATURES)
-    if(VCPKG_LIBRARY_LINKAGE STREQUAL "static")
-        set(DISABLETIFF tiff.patch)
-    endif()
-endif()
-vcpkg_download_distfile(SHADING_PR
-    URLS "https://github.com/libharu/libharu/pull/157.diff"
-    FILENAME "libharu-shading-pr-157.patch"
-    SHA512 10562c8c9c6975b74d625912e7d3b850376941d5e46136679371ce1315f416b6b8e91d73fd1257b907327b2d71d50b8c026547203f280e42fb7b1901245de03c
-)
-
 vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
     REPO libharu/libharu
